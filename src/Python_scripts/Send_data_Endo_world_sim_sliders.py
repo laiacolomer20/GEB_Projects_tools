@@ -8,7 +8,7 @@ import tkinter as tk
 # ------------------------------------------------------------
 DEST_IP = "127.0.0.1"      # receiver IP (same PC => 127.0.0.1)
 DEST_PORT = 12345
-DEVICE_ID = "G4_Endo"      # must match TARGET_DEVICE in receiver
+DEVICE_ID = "G5_Endo"      # must match TARGET_DEVICE in receiver
 
 SEND_HZ = 30.0             # send rate
 DT_MS = int(1000.0 / SEND_HZ)
