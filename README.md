@@ -14,7 +14,7 @@ En aquesta secció hem utilitzat VS Code amb l'extensió PlatformIO, on hem acon
 
 Primerament hem creat un nou projecte anomenat ESP32Test_Blink amb PlatformIO, seleccionant la placa _Espressif ESP32 Dev Module_ i el framework _Arduino_. 
 
-### 2. Orientació 3D amb IMU
+## 2. Orientació 3D amb IMU
 
 
 
