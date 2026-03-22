@@ -1,10 +1,7 @@
-# GEB Projects subject
-This repository is created to show some of the most interesting tools in Engineering Projects
-
-------
-## Seminari 2: Eines de Projectes d’Enginyeria
+# Seminari 2
 L'objectiu de la sessió ha estat apendre a utilitzar les plataformes **GitHub** i **PlatformIO**, mitjançant **Visual Studio Code** (VS Code), per programar una placa **ESP32**. 
 
+## 1. Eines de Projectes d’Enginyeria
 ### 1.1. Configuració de l'entorn
 La directora del grup ha fet un _fork_ del repositori proporcionat pel professor i, a partir d'aquest, hem afegit els col·laboradors, permetent la lliure edició sobre el projecte el qual es manté sempre actualitzat al núvol. 
 
@@ -16,6 +13,8 @@ Per sincronitzar els canvis realitzats respecte la versió original, cal configu
 En aquesta secció hem utilitzat VS Code amb l'extensió PlatformIO, on hem aconseguit fer parpellejar un LED connectat al microcontrolador ESP32. L’**ESP32** és una placa amb microprocessador que disposa de WiFi, Bluetooth i múltiples entrades i sortides per una àmplia gamma de sensors. 
 
 Primerament hem creat un nou projecte anomenat ESP32Test_Blink amb PlatformIO, seleccionant la placa _Espressif ESP32 Dev Module_ i el framework _Arduino_. 
+
+### 2. Orientació 3D amb IMU
 
 
 
