@@ -24,7 +24,9 @@ En la segona part de la pràctica s'ha connectat un **Inertial Mass Unit (IMU) s
 
 La IMU és un sensor que integra un **giroscopi** per mesurar les velocitats angulars en els eixos X, Y i Z, un **acceleròmetre** per mesurar les acceleracions lineals en aquests mateixos eixos, i una **brúixola** que permet obtenir una referència respecte al Nord. A partir d’aquestes mesures, el microprocessador calcula l’orientació 3D de l’objecte utilitzant els angles _Roll_, _Pitch_ i _Yaw_ respecte al sistema de coordenades del món. Les dades recollides per la IMU es poden transmetre a través de Wifi. Per fer-ho, hem utilitzat una xarxa comuna on cada grup tenia assignada una adreça IP específica tant per a l’ordinador com per al mòdul ESP32.
 
-![tempImagePQ8gDx](https://github.com/user-attachments/assets/2332b3bb-f605-483b-8300-da3ed0a63e3c)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2332b3bb-f605-483b-8300-da3ed0a63e3c" width="300">
+</div>
 
 El _software setup_ està construït per 3 programes. Primerament, ```Endowrist_IMU``` que s’executa a l’ESP32 i s’encarrega de llegir el sensor i enviar les dades d’orientació. En segon lloc, un entorn de visualització 3D amb ```RoboDK```, que permet representar l’orientació d’un objecte virtual. Finalment, diversos scripts en Python que reben les dades enviades per l’ESP32 i les transmeten a l’entorn 3D per actualitzar l’orientació en temps real.
 
