@@ -30,4 +30,15 @@ La IMU és un sensor que integra un **giroscopi** per mesurar les velocitats ang
 
 El _software setup_ està construït per 3 programes. Primerament, ```Endowrist_IMU``` que s’executa a l’ESP32 i s’encarrega de llegir el sensor i enviar les dades d’orientació. En segon lloc, un entorn de visualització 3D amb ```RoboDK```, que permet representar l’orientació d’un objecte virtual. Finalment, diversos scripts en Python que reben les dades enviades per l’ESP32 i les transmeten a l’entorn 3D per actualitzar l’orientació en temps real.
 
+### 2.2. Implementació del sistema IMU-ESP32
+
+Inicialment, hem obert el projecte Endowrist_IMU amb VS Code i hem revisat el fitxer ```main.cpp```, que ja incloïa el programa per llegir la IMU i publicar els angles RPY. Seguidament, hem adaptat el codi al nostre grup modificant l’identificador del dispositiu i l’adreça IP del receptor. Després, cal compilar el projecte i carregar-lo a la placa ESP32 amb PlatformIO, fins que apareixi el missatge confirmant que la càrrega s’ha completat correctament.
+
+Més tard, hem obert l’entorn de visualització **3D_Orientation.rdk** a ```RoboDK```, que conté un sistema de coordenades global i un objecte 3D que es pot orientar segons les dades rebudes. Tot seguit, hem executat l’script de Python ```Receive_data_RPY_IMU_world.py```, que rep les dades enviades per l’ESP32 a través de WiFi i actualitza l’orientació de l’objecte en l’entorn virtual. Finalment, hem modificat l’script per seleccionar l’objecte que volíem moure, primer amb **"plane"** i després amb **"surgical_needle"**.
+
+### 2.3. Resultats i ajustaments
+
+Durant les primeres proves hem observat que l’orientació no era exactament correcta. Això és degut al fet que la brúixola de la IMU és sensible a interferències magnètiques i no proporciona una referència perfecta del nord. Per aquest motiu, hem hagut d’orientar manualment el sensor i ajustar el sistema de referència perquè coincidís amb el sistema utilitzat a ```RoboDK```. Concretament, hem intentat alinear l’eix X del sensor amb el Nord i verificar que el valor de yaw fos proper a **zero**.
+
+Un cop fetes aquestes correccions, hem tornat a executar el sistema i hem comprovat que l’objecte 3D seguia correctament els moviments de la IMU. En moure el sensor, l’agulla quirúrgica virtual canviava la seva orientació en temps real, confirmant que la comunicació entre el sensor, l’ESP32, el script Python i ```RoboDK``` funcionava correctament. 
 
