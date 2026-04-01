@@ -1,4 +1,6 @@
 # Seminari 2
+_María Anglada, Laia Colomer, Paula Pepió_     
+
 L'objectiu de la sessió ha estat apendre a utilitzar les plataformes **GitHub** i **PlatformIO**, mitjançant **Visual Studio Code** (VS Code), per programar una placa **ESP32**. 
 
 ------
